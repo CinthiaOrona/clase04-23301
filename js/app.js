@@ -1,13 +1,13 @@
 /********** TAREA CLASE 04 *****************/
 
 /*******************INICIO*****************/
-class App{
-    constructor(parentID, className){
+class App {
+    constructor(parentID, className) {
         this.parentID = parentID;
         this.className = className;
     }
 
-    render(){
+    render() {
         let myApp = document.getElementById(this.parentID);
         myApp.className = this.className;
 
@@ -50,19 +50,26 @@ class Button {
         button.textContent = this.text;
         button.type = this.type;
         button.className = this.className;
-        myApp.append(button);  
-        
-        button.addEventListener('click', (e) =>{
+        myApp.append(button);
+
+        button.addEventListener('click', (e) => {
             e.preventDefault();
             const myInput = document.querySelector("input");
             let mensaje = document.createElement("div");
+
             mensaje.setAttribute("id", "texto");
-            mensaje.className = "alert alert-success m-4";
-            mensaje.textContent = myInput.value;
-            document.body.append(mensaje);
+            mensaje.className = "alert alert-success w-50 position-absolute top-50 start-50 translate-middle";
+            mensaje.textContent = myInput.value
+            myApp.append(mensaje);
+
+            mensaje.addEventListener('click', function () {
+                mensaje.remove();
+            });
         });
-    }    
+    }
 }
+
+
 
 const myApp = new App("app", "container my-4 p-4 bg-light w-50");
 myApp.render();
@@ -94,8 +101,8 @@ console.log(myCat.name);
 
 // Como "clonar otro perro". Una plantilla.
 
-class Perro{
-    constructor(name, age){
+class Perro {
+    constructor(name, age) {
         this.name = name;
         this.age = age;
     }
