@@ -64,7 +64,7 @@ class Button {
     }    
 }
 
-const myApp = new App("app", "container m-4 p-4 bg-light");
+const myApp = new App("app", "container my-4 p-4 bg-light w-50");
 myApp.render();
 
 const myInput = new Input("app", "text", "Escribe tu nombre", "form-control md-5", "input");
