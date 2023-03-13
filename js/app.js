@@ -70,7 +70,7 @@ myApp.render();
 const myInput = new Input("app", "text", "Escribe tu nombre", "form-control md-5", "input");
 myInput.render();
 
-const myButton = new Button("app", "Click me!", "button", "btn btn-primary", "button");
+const myButton = new Button("app", "Click me!", "button", "btn btn-primary mt-3", "button");
 myButton.render();
 
 
